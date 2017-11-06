@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"html/template"
 	"net/http"
 )
@@ -33,9 +34,15 @@ func renderTemplate(w http.ResponseWriter, tmpl string, a *Album) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8080"
+	}
+
 	http.HandleFunc("/view/", viewHandler)
 	http.HandleFunc("/edit/", editHandler)
 	fmt.Println("Record Holder")
-	fmt.Println("server listening on port 8080")
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("server listening on port", port)
+	http.ListenAndServe(":"+port, nil)
 }
