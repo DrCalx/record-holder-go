@@ -1,0 +1,24 @@
+{{ define "content" }}
+<h1>All Albums</h1>
+<a href="/edit/">Create new album</a>
+<table>
+  <thead>
+    <tr>
+      <th>_id</th>
+      <th>title</th>
+      <th>artist</th>
+      <th>view</th>
+      <th>edit</th>
+      <th>delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $index, $element := .}}
+    <tr>
+      <td>{{.Id}}</td>
+      <td>{{.Title}}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+{{ end }}
