@@ -1,10 +1,12 @@
+{{ define "content" }}
 <h1>{{.Title}}</h1>
 <div>
   <h2>{{.Artist}}</h2>
 </div>
 <p>
-  <a href="/edit/{{._id}}">Edit</a>
+  <a href="/edit/{{.Id}}">Edit</a>
 </p>
 <p>
   <a href="/home/">Go home</a>
 </p>
+{{ end }}

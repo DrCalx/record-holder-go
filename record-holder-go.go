@@ -7,20 +7,26 @@ import (
 )
 
 type Album struct {
-	_id string
+	Id string
 	Title string
 	Artist string
 }
 
-var templates = template.Must(template.ParseFiles("views/view.html"))
+var templates = template.Must(template.ParseFiles("views/layout.html", "views/view.html", "views/edit.html"))
 
 func viewHandler(w http.ResponseWriter, r *http.Request) {
-	a := &Album{_id: "1", Title: "Please Please Me", Artist: "The Beatles"}
+	a := &Album{Id: "1", Title: "Please Please Me", Artist: "The Beatles"}
 	renderTemplate(w, "view", a)
 }
 
+func editHandler(w http.ResponseWriter, r *http.Request) {
+	a := &Album{Id: "1", Title: "Please Please Me", Artist: "The Beatles"}
+	renderTemplate(w, "edit", a)
+}
+
 func renderTemplate(w http.ResponseWriter, tmpl string, a *Album) {
-	err := templates.ExecuteTemplate(w, tmpl+".html", a)
+	t, _ := template.ParseFiles("views/layout.html", "views/"+tmpl+".html")
+	err := t.ExecuteTemplate(w, "layout", a)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -28,6 +34,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, a *Album) {
 
 func main() {
 	http.HandleFunc("/view/", viewHandler)
+	http.HandleFunc("/edit/", editHandler)
 	fmt.Println("Record Holder")
 	fmt.Println("server listening on port 8080")
 	http.ListenAndServe(":8080", nil)

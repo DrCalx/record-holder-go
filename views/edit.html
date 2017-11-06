@@ -1,0 +1,16 @@
+{{ define "content" }}
+<h1>Editing {{.Id}}</h1>
+<form>
+  <div>
+    <label for="title_input">Title:</label>
+    <input id="title_input" type="text" name="title" value={{.Title}}>
+  </div>
+  <div>
+    <label for="artist_input">Artist:</label>
+    <input id="artist_input" type="text" name="artist" value={{.Artist}}>
+  </div>
+  <div>
+    <input type="submit" value="Save"/>
+  </div>
+</form>
+{{ end }}
