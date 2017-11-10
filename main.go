@@ -1,8 +1,6 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -35,19 +33,11 @@ type Album struct {
 // }
 
 func main() {
-	router := gin.Default()
+	router = gin.Default()
 
 	router.LoadHTMLGlob("templates/*")
 
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(
-			http.StatusOK, 
-			"index.html", 
-			gin.H{
-				"Title": "Record Holder",
-			},
-		)
-	})
+	initializeRoutes()
 
 	router.Run()
 }
