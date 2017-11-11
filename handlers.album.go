@@ -15,7 +15,7 @@ func showIndexPage(c *gin.Context) {
 		"index.html",
 		gin.H{
 			"title": "Record Holder",
-			"payload": albums,
+			"albums": albums,
 		},
 	)
 }
@@ -28,7 +28,7 @@ func getAlbum(c *gin.Context) {
 				"album.html",
 				gin.H{
 					"title": album.Title,
-					"payload": album,
+					"album": album,
 				},
 			)
 		} else {

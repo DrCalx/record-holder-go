@@ -1,12 +1,36 @@
 {{template "header.html" .}}
 
-  <h1>Hello world</h1>
-
-  {{range .payload}}
-    <a href="/album/view/{{.ID}}">
-      <h2>{{ .Title }}</h2>
-    </a>
-    <p>{{.Artist}}</p>
-  {{end}}
+  <h1>All Albums</h1>
+  <a href="/album/edit/">Create new album</a>
+  <table>
+    <thead>
+      <tr>
+        <th>_id</th>
+        <th>title</th>
+        <th>artist</th>
+        <th>view</th>
+        <th>edit</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .albums}}
+        <tr>
+          <td>{{.ID}}</td>
+          <td>{{.Title}}</td>
+          <td>{{.Artist}}</td>
+          <td>
+            <a href="/view/{{.ID}}">View</a>
+          </td>
+          <td>
+            <a href="/edit/{{.ID}}">Edit</a>
+          </td>
+          <td>
+            <a href="/delete/{{.ID}}">Delete</a>
+          </td>
+        </tr>
+      {{end}}
+    </tbody>
+  </table>
 
 {{template "footer.html" .}}
