@@ -1,0 +1,16 @@
+{{ define "content" }}
+  <div class="page-header">
+    <h2>{{ .title }}</h2>
+  </div>
+  <form action="/albums/{{ .album.Id.Hex }}" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" value="{{ .album.Title }}">
+    </div>
+    <div class="form-group">
+      <label for="artist">Artist</label>
+      <input type="text" name="artist" id="artist" value="{{ .album.Artist }}">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+{{ end }}
