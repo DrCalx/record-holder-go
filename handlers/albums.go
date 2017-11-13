@@ -6,7 +6,7 @@ import (
 
 	"gopkg.in/mgo.v2"
 	"github.com/gin-gonic/gin"
-	"github.com/drcalx/record-holder-go/models"
+	"github.com/DrCalx/record-holder-go/models"
 )
 
 func New(c *gin.Context) {

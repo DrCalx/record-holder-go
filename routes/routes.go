@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/drcalx/record-holder-go/handlers"
+	"github.com/DrCalx/record-holder-go/handlers"
 )
 
 func InitializeRoutes(router *gin.Engine) {

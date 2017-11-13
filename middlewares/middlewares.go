@@ -3,7 +3,7 @@ package middlewares
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/drcalx/record-holder-go/db"
+	"github.com/DrCalx/record-holder-go/db"
 )
 
 func Connect(c *gin.Context) {

@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/drcalx/record-holder-go/db"
-	"github.com/drcalx/record-holder-go/middlewares"
-	"github.com/drcalx/record-holder-go/routes"
+	"github.com/DrCalx/record-holder-go/db"
+	"github.com/DrCalx/record-holder-go/middlewares"
+	"github.com/DrCalx/record-holder-go/routes"
 )
 
 var router *gin.Engine
