@@ -1,5 +1,4 @@
-{{template "header.html" .}}
-
+{{ define "content" }}
   <h1>All Albums</h1>
   <a href="/album/edit/">Create new album</a>
   <table>
@@ -14,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      {{range .albums}}
+      {{ range .albums }}
         <tr>
           <td>{{.ID}}</td>
           <td>{{.Title}}</td>
@@ -29,8 +28,7 @@
             <a href="/delete/{{.ID}}">Delete</a>
           </td>
         </tr>
-      {{end}}
+      {{ end }}
     </tbody>
   </table>
-
-{{template "footer.html" .}}
+{{ end }}
