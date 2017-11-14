@@ -18,7 +18,13 @@ func main() {
 
 	router.Use(middlewares.Connect)
 
-	router.LoadHTMLGlob("templates/*")
+	// router.LoadHTMLGlob("templates/*/*.html")
+
+	htmlRender := GinHTMLRender.New()
+	htmlRender.Debug = gin.IsDebugging()
+	htmlRender.Layout = "layouts/default"
+
+	router.HTMLRender = htmlRender.Create()
 
 	routes.InitializeRoutes(router)
 

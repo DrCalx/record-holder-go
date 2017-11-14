@@ -15,17 +15,17 @@
     <tbody>
       {{ range .albums }}
         <tr>
-          <td>{{.ID}}</td>
-          <td>{{.Title}}</td>
-          <td>{{.Artist}}</td>
+          <td>{{ .Id }}</td>
+          <td>{{ .Title }}</td>
+          <td>{{ .Artist }}</td>
           <td>
-            <a href="/view/{{.ID}}">View</a>
+            <a href="/view/{{.Id}}">View</a>
           </td>
           <td>
-            <a href="/edit/{{.ID}}">Edit</a>
+            <a href="/edit/{{.Id}}">Edit</a>
           </td>
           <td>
-            <a href="/delete/{{.ID}}">Delete</a>
+            <a href="/delete/{{.Id}}">Delete</a>
           </td>
         </tr>
       {{ end }}

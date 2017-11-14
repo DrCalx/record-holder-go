@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .title }}</title>
+  </head>
+  <body>
+    <p>Test 1234</p>
+    {{ template "menu.html" . }}
+
+    <div>
+      {{ template "content" . }}
+    </div>
+
+  </body>
+</html>
