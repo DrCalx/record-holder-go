@@ -5,6 +5,7 @@ import (
 	"github.com/DrCalx/record-holder-go/db"
 	"github.com/DrCalx/record-holder-go/middlewares"
 	"github.com/DrCalx/record-holder-go/routes"
+	// eztemplate "github.com/michelloworld/ez-gin-template"
 )
 
 var router *gin.Engine
@@ -18,13 +19,13 @@ func main() {
 
 	router.Use(middlewares.Connect)
 
-	// router.LoadHTMLGlob("templates/*/*.html")
+	// render := eztemplate.New()
+	// render.TemplatesDir = "templates/"
+	// render.Layout = "layouts/base"
+	// render.Debug = true
+	// router.HTMLRender = render.Init()
 
-	htmlRender := GinHTMLRender.New()
-	htmlRender.Debug = gin.IsDebugging()
-	htmlRender.Layout = "layouts/default"
-
-	router.HTMLRender = htmlRender.Create()
+	router.LoadHTMLGlob("views/**/*.html")
 
 	routes.InitializeRoutes(router)
 

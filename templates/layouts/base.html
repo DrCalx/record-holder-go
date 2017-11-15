@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>{{ .title }}</title>
   </head>
   <body>
     <p>Test 1234</p>
-    {{ template "menu.html" . }}
-
     <div>
       {{ template "content" . }}
     </div>
-
   </body>
 </html>
