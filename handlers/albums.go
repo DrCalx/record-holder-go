@@ -14,7 +14,7 @@ func New(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK,
-		"",
+		"albums/form",
 		gin.H{
 			"album": album,
 		},
@@ -62,7 +62,7 @@ func List(c *gin.Context) {
 	}
 	c.HTML(
 		http.StatusOK,
-		"list.html",
+		"albums/list",
 		gin.H{
 			"title": "Record Holder - All Albums",
 			"albums": albums,
