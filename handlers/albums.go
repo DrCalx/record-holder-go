@@ -69,3 +69,11 @@ func List(c *gin.Context) {
 		},
 	)
 }
+
+func Edit(c *gin.Context) {
+
+}
+
+func Delete(c *gin.Context) {
+	
+}

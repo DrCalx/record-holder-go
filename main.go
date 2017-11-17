@@ -19,8 +19,8 @@ func main() {
 
 	router.Use(middlewares.Connect)
 
-	htmlRender := GinHTMLRender.New()
-	router.HTMLRender = htmlRender.Create()
+	ginRender := GinHTMLRender.New()
+	router.HTMLRender = ginRender.Create()
 
 	routes.InitializeRoutes(router)
 
