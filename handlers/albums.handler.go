@@ -77,3 +77,11 @@ func Edit(c *gin.Context) {
 func Delete(c *gin.Context) {
 	
 }
+
+func Save(c *gin.Context) {
+
+}
+
+func View(c *gin.Context) {
+	
+}

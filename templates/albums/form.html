@@ -2,6 +2,7 @@
   <div class="page-header">
     <h2>{{ .title }}</h2>
   </div>
+  <h1>Editing {{ .album.Id.Hex }}</h1>
   <form action="/albums/{{ .album.Id.Hex }}" method="POST">
     <div class="form-group">
       <label for="title">Title</label>
