@@ -5,7 +5,7 @@ import (
 	"github.com/DrCalx/record-holder-go/db"
 	"github.com/DrCalx/record-holder-go/middlewares"
 	"github.com/DrCalx/record-holder-go/routes"
-	"github.com/DrCalx/record-holder-go/render"
+	"github.com/madhums/go-gin-mgo-demo/gin_html_render"
 )
 
 var router *gin.Engine

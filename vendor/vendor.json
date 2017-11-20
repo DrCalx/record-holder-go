@@ -45,6 +45,12 @@
 			"revisionTime": "2017-10-31T14:47:02Z"
 		},
 		{
+			"checksumSHA1": "qY47NPx7yMo42hZNlne9FZyOEd8=",
+			"path": "github.com/madhums/go-gin-mgo-demo/gin_html_render",
+			"revision": "3c308faae11f2b76380f5b2251d4f15ca3daf2a8",
+			"revisionTime": "2015-08-08T23:56:28Z"
+		},
+		{
 			"checksumSHA1": "w5RcOnfv5YDr3j2bd1YydkPiZx4=",
 			"path": "github.com/mattn/go-isatty",
 			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
@@ -115,5 +121,5 @@
 			"revision": ""
 		}
 	],
-	"rootPath": "github.com/drcalx/record-holder-go"
+	"rootPath": "github.com/DrCalx/record-holder-go"
 }
